@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For sale in Lisbon – Mose</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f4ef; --card:#ffffff; --ink:#1d1d1b; --muted:#6b6862; --line:#e4e0d7;
+    --accent:#2f5d50; --sold:#a33a2b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,sans-serif}
+  .wrap{max-width:760px;margin:0 auto;padding:40px 20px 64px}
+  header h1{font-size:30px;line-height:1.15;margin:0 0 8px;letter-spacing:-.01em}
+  header p{margin:0;color:var(--muted)}
+  .facts{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+  .facts li{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px}
+  .item{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-top:28px;overflow:hidden}
+  .gallery{display:flex;gap:6px;overflow-x:auto;scroll-snap-type:x mandatory;background:#ebe8e1;padding:6px}
+  .gallery a{flex:0 0 auto;scroll-snap-align:start}
+  .gallery img{display:block;height:340px;width:auto;border-radius:8px}
+  .hint{font-size:12px;color:var(--muted);padding:6px 18px 0}
+  .body{padding:14px 20px 22px}
+  .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .top h2{margin:0;font-size:21px;line-height:1.25}
+  .price{font-size:22px;font-weight:700;color:var(--accent);white-space:nowrap}
+  .status{display:inline-block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-top:2px}
+  .item.sold .price{color:var(--sold);text-decoration:line-through}
+  .item.sold .status{color:var(--sold)}
+  .item.sold .gallery{opacity:.55}
+  .desc{margin:10px 0 12px}
+  dl{display:grid;grid-template-columns:max-content 1fr;gap:4px 16px;margin:0;font-size:15px}
+  dt{color:var(--muted)}
+  dd{margin:0}
+  ul.feat{margin:12px 0 0;padding-left:20px;font-size:15px}
+  .bundle{margin-top:28px;background:var(--accent);color:#fff;border-radius:14px;padding:18px 20px}
+  .bundle strong{font-size:18px}
+  footer{margin-top:32px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:16px}
+  @media (max-width:520px){ .gallery img{height:280px} header h1{font-size:25px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>For sale in Lisbon</h1>
+    <p>Well-kept travel bags and a few other things, all in excellent condition.</p>
+    <ul class="facts">
+      <li>📍 Pickup near Rossio until early December</li>
+      <li>💶 Cash or MB WAY at pickup</li>
+      <li>💬 Message me where you found this link</li>
+    </ul>
+  </header>
+
+  <!-- To mark an item sold: add class "sold" to its <article> and change the status text to "Sold". -->
+
+  <article class="item" id="sojourn">
+    <div class="gallery">
+      <a href="images/osprey-sojourn-03-backpack.jpg" target="_blank"><img src="images/osprey-sojourn-03-backpack.jpg" alt="Osprey Sojourn worn as a backpack"></a>
+      <a href="images/osprey-sojourn-01-front.jpg" target="_blank"><img src="images/osprey-sojourn-01-front.jpg" alt="Osprey Sojourn, front"></a>
+      <a href="images/osprey-sojourn-02-back.jpg" target="_blank"><img src="images/osprey-sojourn-02-back.jpg" alt="Osprey Sojourn, back panel and wheels"></a>
+      <a href="images/osprey-sojourn-04-inside.jpg" target="_blank"><img src="images/osprey-sojourn-04-inside.jpg" alt="Osprey Sojourn, main compartment open"></a>
+      <a href="images/osprey-sojourn-05-wheels.jpg" target="_blank"><img src="images/osprey-sojourn-05-wheels.jpg" alt="Osprey Sojourn, chassis and wheels"></a>
+    </div>
+    <div class="hint">Swipe for more photos, tap to enlarge</div>
+    <div class="body">
+      <div class="top">
+        <h2>Osprey Sojourn 80L wheeled travel pack</h2>
+        <div class="price">€167</div>
+      </div>
+      <span class="status">Available</span>
+      <p class="desc">A big rolling bag that turns into a proper backpack when you hit stairs, cobbles or sand. The harness and hipbelt zip away behind a panel when you're rolling it.</p>
+      <p class="desc"><strong>Condition:</strong> excellent. All zips, wheels and the handle work perfectly. A few barely noticeable loose threads on the zipper cover (nothing that affects how it works), and the wheels have scuffs from normal use.</p>
+      <dl>
+        <dt>Size</dt><dd>80 L · 28″ (about 71 × 36 × 36 cm)</dd>
+        <dt>Weight</dt><dd>about 4.1 kg empty</dd>
+        <dt>New price</dt><dd>€300–380 for the current model</dd>
+      </dl>
+      <ul class="feat">
+        <li>Rigid HighRoad chassis with large wheels</li>
+        <li>Stowable backpack harness and hipbelt</li>
+        <li>Lockable zips and compression straps inside and out</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="item" id="farpoint">
+    <div class="gallery">
+      <a href="images/osprey-farpoint36-01-front.jpg" target="_blank"><img src="images/osprey-farpoint36-01-front.jpg" alt="Osprey Farpoint Wheels 36, front"></a>
+      <a href="images/osprey-farpoint36-02-backpack.jpg" target="_blank"><img src="images/osprey-farpoint36-02-backpack.jpg" alt="Osprey Farpoint Wheels 36 worn as a backpack"></a>
+      <a href="images/osprey-farpoint36-05-inside.jpg" target="_blank"><img src="images/osprey-farpoint36-05-inside.jpg" alt="Osprey Farpoint Wheels 36, inside"></a>
+      <a href="images/osprey-farpoint36-03-wheels.jpg" target="_blank"><img src="images/osprey-farpoint36-03-wheels.jpg" alt="Osprey Farpoint Wheels 36, harness panel and wheels"></a>
+      <a href="images/osprey-farpoint36-04-wheel-closeup.jpg" target="_blank"><img src="images/osprey-farpoint36-04-wheel-closeup.jpg" alt="Osprey Farpoint Wheels 36, wheel close-up"></a>
+    </div>
+    <div class="hint">Swipe for more photos, tap to enlarge</div>
+    <div class="body">
+      <div class="top">
+        <h2>Osprey Farpoint Wheels 36L carry-on</h2>
+        <div class="price">€127</div>
+      </div>
+      <span class="status">Available</span>
+      <p class="desc">Cabin-size roller that's also a comfortable backpack: roll it through the station, then put it on your back for the stairs.</p>
+      <p class="desc"><strong>Condition:</strong> excellent. Everything works perfectly; no tears or stains. The wheels have scuffs from normal use.</p>
+      <dl>
+        <dt>Size</dt><dd>36 L · sold by Osprey as carry-on (21.5″ / 55 cm). Check your airline's limits.</dd>
+        <dt>Weight</dt><dd>about 2.4 kg empty</dd>
+        <dt>New price</dt><dd>about €190–275</dd>
+      </dl>
+      <ul class="feat">
+        <li>Large 90 mm wheels and T-handle</li>
+        <li>Stowable padded harness and hipbelt</li>
+        <li>Internal compression straps and zippered mesh pocket</li>
+      </ul>
+    </div>
+  </article>
+
+  <div class="bundle"><strong>Both bags: €275</strong><br>One big bag and one carry-on, a complete travel setup.</div>
+
+  <article class="item" id="m705">
+    <div class="gallery">
+      <a href="images/logitech-m705-01-side.jpg" target="_blank"><img src="images/logitech-m705-01-side.jpg" alt="Logitech M705 Marathon mouse, side"></a>
+      <a href="images/logitech-m705-02-top.jpg" target="_blank"><img src="images/logitech-m705-02-top.jpg" alt="Logitech M705 Marathon mouse, top"></a>
+    </div>
+    <div class="hint">Swipe for more photos, tap to enlarge</div>
+    <div class="body">
+      <div class="top">
+        <h2>Logitech M705 Marathon wireless mouse</h2>
+        <div class="price">€19</div>
+      </div>
+      <span class="status">Available</span>
+      <p class="desc">Full-size ergonomic mouse for right-handers, with a hyper-fast scroll wheel you can switch to click-by-click. Comes with its USB Unifying receiver. Works perfectly.</p>
+      <dl>
+        <dt>Battery</dt><dd>2 × AA, rated for up to 3 years</dd>
+        <dt>Works with</dt><dd>Mac, Windows, Chromebook</dd>
+        <dt>New price</dt><dd>€44.99 at Logitech</dd>
+      </dl>
+    </div>
+  </article>
+
+  <footer>
+    <p><strong>Why I'm selling:</strong> I've collected a few too many luggage pieces in my wandering and want to save space at home.</p>
+    Last updated 18 November 2026. If an item is listed here, it's still available.
+  </footer>
+</div>
+</body>
+</html>
