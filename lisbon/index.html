@@ -3,58 +3,64 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>For sale in Lisbon – Mose</title>
+<title>For sale in Lisbon · À venda em Lisboa – Mose Hayward</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Young+Serif&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#f6f4ef; --card:#ffffff; --ink:#1d1d1b; --muted:#6b6862; --line:#e4e0d7;
-    --accent:#2f5d50; --sold:#a33a2b;
-  }
+  :root{--paper:#FBEEE0;--glow:#F8D9B5;--ground:#F4C48D;--accent:#F0A24B;--ink:#1E1208;--ink-soft:#5A3E22;--espresso:#33190C;--line:#D6B294}
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,sans-serif}
-  .wrap{max-width:760px;margin:0 auto;padding:40px 20px 64px}
-  header h1{font-size:30px;line-height:1.15;margin:0 0 8px;letter-spacing:-.01em}
-  header p{margin:0;color:var(--muted)}
-  .facts{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
-  .facts li{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px}
-  .item{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-top:28px;overflow:hidden}
-  .gallery{display:flex;gap:6px;overflow-x:auto;scroll-snap-type:x mandatory;background:#ebe8e1;padding:6px}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Space Grotesk",system-ui,sans-serif}
+  .wrap{max-width:720px;margin:0 auto;padding:28px 20px 64px}
+  a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px;text-decoration-thickness:2px}
+  h1,h2{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+  h1{font-size:40px;margin:22px 0 10px}
+  h2{font-size:24px}
+  .lang{display:flex;justify-content:flex-end;gap:4px}
+  .lang button{font:inherit;font-size:14px;font-weight:500;background:none;border:1px solid var(--line);color:var(--ink-soft);padding:4px 12px;border-radius:4px;cursor:pointer}
+  .lang button[aria-pressed="true"]{background:var(--espresso);border-color:var(--espresso);color:var(--paper)}
+  .sub{font-size:19px;color:var(--ink-soft);margin:0 0 18px}
+  .info{margin:0;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:16px}
+  .info p{margin:2px 0}
+  .item{margin-top:40px}
+  .gallery{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
   .gallery a{flex:0 0 auto;scroll-snap-align:start}
-  .gallery img{display:block;height:340px;width:auto;border-radius:8px}
-  .hint{font-size:12px;color:var(--muted);padding:6px 18px 0}
-  .body{padding:14px 20px 22px}
-  .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
-  .top h2{margin:0;font-size:21px;line-height:1.25}
-  .price{font-size:22px;font-weight:700;color:var(--accent);white-space:nowrap}
-  .status{display:inline-block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-top:2px}
-  .item.sold .price{color:var(--sold);text-decoration:line-through}
-  .item.sold .status{color:var(--sold)}
-  .item.sold .gallery{opacity:.55}
-  .desc{margin:10px 0 12px}
-  dl{display:grid;grid-template-columns:max-content 1fr;gap:4px 16px;margin:0;font-size:15px}
-  dt{color:var(--muted)}
-  dd{margin:0}
-  ul.feat{margin:12px 0 0;padding-left:20px;font-size:15px}
-  .bundle{margin-top:28px;background:var(--accent);color:#fff;border-radius:14px;padding:18px 20px}
-  .bundle strong{font-size:18px}
-  footer{margin-top:32px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:16px}
-  @media (max-width:520px){ .gallery img{height:280px} header h1{font-size:25px} }
+  .gallery img{display:block;height:330px;width:auto;border-radius:3px}
+  .hint{font-size:13px;color:var(--ink-soft);margin:2px 0 12px}
+  .top{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+  .price{font-family:"Young Serif",Georgia,serif;font-size:26px;white-space:nowrap}
+  .status{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--ground);padding:2px 8px;border-radius:3px}
+  .item.sold .price{text-decoration:line-through;color:var(--ink-soft)}
+  .item.sold .status{background:var(--ink);color:var(--paper)}
+  .item.sold .gallery{opacity:.5}
+  .item p{margin:10px 0}
+  dl{display:grid;grid-template-columns:max-content 1fr;gap:2px 16px;margin:12px 0;font-size:16px}
+  dt{color:var(--ink-soft)} dd{margin:0}
+  ul{margin:8px 0 0;padding-left:20px;font-size:16px}
+  .bundle{margin-top:40px;background:var(--espresso);color:var(--paper);padding:18px 20px;border-radius:4px}
+  .bundle strong{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:22px}
+  footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:15px;color:var(--ink-soft)}
+  footer p{margin:6px 0}
+  html[lang="en"] [lang="pt"], html[lang="pt"] [lang="en"]{display:none}
+  @media (max-width:520px){h1{font-size:32px}.gallery img{height:270px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <h1>For sale in Lisbon</h1>
-    <p>Well-kept travel bags and a few other things, all in excellent condition.</p>
-    <ul class="facts">
-      <li>📍 Pickup near Rossio until early December</li>
-      <li>💶 Cash or MB WAY at pickup</li>
-      <li>💬 Message me where you found this link</li>
-    </ul>
-  </header>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-set="en" aria-pressed="true">English</button>
+    <button type="button" data-set="pt" aria-pressed="false">Português</button>
+  </div>
 
-  <!-- To mark an item sold: add class "sold" to its <article> and change the status text to "Sold". -->
+  <h1><span lang="en">For sale in Lisbon</span><span lang="pt">À venda em Lisboa</span></h1>
+  <p class="sub"><span lang="en">Time to pare back and get rid of some beloved travel items.</span><span lang="pt">Está na hora de aliviar a carga e despedir-me de alguns companheiros de viagem muito estimados.</span></p>
+
+  <div class="info">
+    <p><span lang="en">Pickup near Rossio until early December · cash or MB WAY at pickup</span><span lang="pt">Recolha perto do Rossio até ao início de dezembro · pagamento em dinheiro ou MB WAY na recolha</span></p>
+    <p><span lang="en">Contact:</span><span lang="pt">Contacto:</span> <a href="https://wa.me/351923225426">+351 923 225 426</a> (WhatsApp) · <a href="mailto:m+stuff@mosehayward.com">m+stuff@mosehayward.com</a></p>
+  </div>
+
+  <!-- To mark an item sold: add class "sold" to its <article> and set both status texts to Sold / Vendido. -->
 
   <article class="item" id="sojourn">
     <div class="gallery">
@@ -64,26 +70,36 @@
       <a href="images/osprey-sojourn-04-inside.jpg" target="_blank"><img src="images/osprey-sojourn-04-inside.jpg" alt="Osprey Sojourn, main compartment open"></a>
       <a href="images/osprey-sojourn-05-wheels.jpg" target="_blank"><img src="images/osprey-sojourn-05-wheels.jpg" alt="Osprey Sojourn, chassis and wheels"></a>
     </div>
-    <div class="hint">Swipe for more photos, tap to enlarge</div>
-    <div class="body">
-      <div class="top">
-        <h2>Osprey Sojourn 80L wheeled travel pack</h2>
-        <div class="price">€167</div>
-      </div>
-      <span class="status">Available</span>
-      <p class="desc">A big rolling bag that turns into a proper backpack when you hit stairs, cobbles or sand. The harness and hipbelt zip away behind a panel when you're rolling it.</p>
-      <p class="desc"><strong>Condition:</strong> excellent. All zips, wheels and the handle work perfectly. A few barely noticeable loose threads on the zipper cover (nothing that affects how it works), and the wheels have scuffs from normal use.</p>
-      <dl>
-        <dt>Size</dt><dd>80 L · 28″ (about 71 × 36 × 36 cm)</dd>
-        <dt>Weight</dt><dd>about 4.1 kg empty</dd>
-        <dt>New price</dt><dd>€300–380 for the current model</dd>
-      </dl>
-      <ul class="feat">
-        <li>Rigid HighRoad chassis with large wheels</li>
-        <li>Stowable backpack harness and hipbelt</li>
-        <li>Lockable zips and compression straps inside and out</li>
-      </ul>
+    <div class="hint"><span lang="en">Swipe for more photos, tap to enlarge</span><span lang="pt">Deslize para ver mais fotos, toque para ampliar</span></div>
+    <div class="top">
+      <h2><span lang="en">Osprey Sojourn 80L wheeled travel pack</span><span lang="pt">Osprey Sojourn 80L, mochila de viagem com rodas</span></h2>
+      <div class="price">€167</div>
     </div>
+    <span class="status"><span lang="en">Available</span><span lang="pt">Disponível</span></span>
+    <p lang="en">A big rolling bag that turns into a proper backpack when you hit stairs, cobbles or sand. The harness and hipbelt zip away behind a panel when you're rolling it.</p>
+    <p lang="pt">Uma mala grande com rodas que se transforma numa verdadeira mochila quando surgem escadas, calçada ou areia. As alças e o cinto de anca guardam-se atrás de um painel com fecho enquanto a mala rola.</p>
+    <p lang="en"><strong>Condition:</strong> excellent. All zips, wheels and the handle work perfectly. A few barely noticeable loose threads on the zipper cover (nothing that affects how it works), and the wheels have scuffs from normal use.</p>
+    <p lang="pt"><strong>Estado:</strong> excelente. Todos os fechos, as rodas e a pega funcionam perfeitamente. Alguns fios soltos quase impercetíveis na cobertura do fecho (nada que afete o funcionamento) e as rodas têm marcas de uso normal.</p>
+    <dl lang="en">
+      <dt>Size</dt><dd>80 L · 28″ (about 71 × 36 × 36 cm)</dd>
+      <dt>Weight</dt><dd>about 4.1 kg empty</dd>
+      <dt>New price</dt><dd>€300–380 for the current model</dd>
+    </dl>
+    <dl lang="pt">
+      <dt>Tamanho</dt><dd>80 L · 28″ (cerca de 71 × 36 × 36 cm)</dd>
+      <dt>Peso</dt><dd>cerca de 4,1 kg vazia</dd>
+      <dt>Preço novo</dt><dd>300–380 € o modelo atual</dd>
+    </dl>
+    <ul lang="en">
+      <li>Rigid HighRoad chassis with large wheels</li>
+      <li>Stowable backpack harness and hipbelt</li>
+      <li>Lockable zips and compression straps inside and out</li>
+    </ul>
+    <ul lang="pt">
+      <li>Chassis rígido HighRoad com rodas grandes</li>
+      <li>Alças de mochila e cinto de anca escamoteáveis</li>
+      <li>Fechos que aceitam cadeado e correias de compressão por dentro e por fora</li>
+    </ul>
   </article>
 
   <article class="item" id="farpoint">
@@ -94,55 +110,88 @@
       <a href="images/osprey-farpoint36-03-wheels.jpg" target="_blank"><img src="images/osprey-farpoint36-03-wheels.jpg" alt="Osprey Farpoint Wheels 36, harness panel and wheels"></a>
       <a href="images/osprey-farpoint36-04-wheel-closeup.jpg" target="_blank"><img src="images/osprey-farpoint36-04-wheel-closeup.jpg" alt="Osprey Farpoint Wheels 36, wheel close-up"></a>
     </div>
-    <div class="hint">Swipe for more photos, tap to enlarge</div>
-    <div class="body">
-      <div class="top">
-        <h2>Osprey Farpoint Wheels 36L carry-on</h2>
-        <div class="price">€127</div>
-      </div>
-      <span class="status">Available</span>
-      <p class="desc">Cabin-size roller that's also a comfortable backpack: roll it through the station, then put it on your back for the stairs.</p>
-      <p class="desc"><strong>Condition:</strong> excellent. Everything works perfectly; no tears or stains. The wheels have scuffs from normal use.</p>
-      <dl>
-        <dt>Size</dt><dd>36 L · sold by Osprey as carry-on (21.5″ / 55 cm). Check your airline's limits.</dd>
-        <dt>Weight</dt><dd>about 2.4 kg empty</dd>
-        <dt>New price</dt><dd>about €190–275</dd>
-      </dl>
-      <ul class="feat">
-        <li>Large 90 mm wheels and T-handle</li>
-        <li>Stowable padded harness and hipbelt</li>
-        <li>Internal compression straps and zippered mesh pocket</li>
-      </ul>
+    <div class="hint"><span lang="en">Swipe for more photos, tap to enlarge</span><span lang="pt">Deslize para ver mais fotos, toque para ampliar</span></div>
+    <div class="top">
+      <h2><span lang="en">Osprey Farpoint Wheels 36L carry-on</span><span lang="pt">Osprey Farpoint Wheels 36L, mala de cabine</span></h2>
+      <div class="price">€127</div>
     </div>
+    <span class="status"><span lang="en">Available</span><span lang="pt">Disponível</span></span>
+    <p lang="en">Cabin-size roller that's also a comfortable backpack: roll it through the station, then put it on your back for the stairs.</p>
+    <p lang="pt">Mala de cabine com rodas que também é uma mochila confortável: vai a rolar pela estação e às costas nas escadas.</p>
+    <p lang="en"><strong>Condition:</strong> excellent. Everything works perfectly; no tears or stains. The wheels have scuffs from normal use.</p>
+    <p lang="pt"><strong>Estado:</strong> excelente. Tudo funciona perfeitamente, sem rasgões nem manchas. As rodas têm marcas de uso normal.</p>
+    <dl lang="en">
+      <dt>Size</dt><dd>36 L · sold by Osprey as carry-on (21.5″ / 55 cm). Check your airline's limits.</dd>
+      <dt>Weight</dt><dd>about 2.4 kg empty</dd>
+      <dt>New price</dt><dd>about €190–275</dd>
+    </dl>
+    <dl lang="pt">
+      <dt>Tamanho</dt><dd>36 L · vendida pela Osprey como bagagem de cabine (21,5″ / 55 cm). Confirme os limites da sua companhia aérea.</dd>
+      <dt>Peso</dt><dd>cerca de 2,4 kg vazia</dd>
+      <dt>Preço novo</dt><dd>cerca de 190–275 €</dd>
+    </dl>
+    <ul lang="en">
+      <li>Large 90 mm wheels and T-handle</li>
+      <li>Stowable padded harness and hipbelt</li>
+      <li>Internal compression straps and zippered mesh pocket</li>
+    </ul>
+    <ul lang="pt">
+      <li>Rodas grandes de 90 mm e pega em T</li>
+      <li>Alças almofadadas e cinto de anca escamoteáveis</li>
+      <li>Correias de compressão interiores e bolso de rede com fecho</li>
+    </ul>
   </article>
 
-  <div class="bundle"><strong>Both bags: €275</strong><br>One big bag and one carry-on, a complete travel setup.</div>
+  <div class="bundle">
+    <strong><span lang="en">Both bags: €240</span><span lang="pt">As duas malas: 240 €</span></strong><br>
+    <span lang="en">One big bag and one carry-on, a complete travel setup.</span><span lang="pt">Uma grande e uma de cabine: o conjunto completo para viajar.</span>
+  </div>
 
   <article class="item" id="m705">
     <div class="gallery">
       <a href="images/logitech-m705-01-side.jpg" target="_blank"><img src="images/logitech-m705-01-side.jpg" alt="Logitech M705 Marathon mouse, side"></a>
       <a href="images/logitech-m705-02-top.jpg" target="_blank"><img src="images/logitech-m705-02-top.jpg" alt="Logitech M705 Marathon mouse, top"></a>
     </div>
-    <div class="hint">Swipe for more photos, tap to enlarge</div>
-    <div class="body">
-      <div class="top">
-        <h2>Logitech M705 Marathon wireless mouse</h2>
-        <div class="price">€19</div>
-      </div>
-      <span class="status">Available</span>
-      <p class="desc">Full-size ergonomic mouse for right-handers, with a hyper-fast scroll wheel you can switch to click-by-click. Comes with its USB Unifying receiver. Works perfectly.</p>
-      <dl>
-        <dt>Battery</dt><dd>2 × AA, rated for up to 3 years</dd>
-        <dt>Works with</dt><dd>Mac, Windows, Chromebook</dd>
-        <dt>New price</dt><dd>€44.99 at Logitech</dd>
-      </dl>
+    <div class="hint"><span lang="en">Swipe for more photos, tap to enlarge</span><span lang="pt">Deslize para ver mais fotos, toque para ampliar</span></div>
+    <div class="top">
+      <h2><span lang="en">Logitech M705 Marathon wireless mouse</span><span lang="pt">Rato sem fios Logitech M705 Marathon</span></h2>
+      <div class="price">€19</div>
     </div>
+    <span class="status"><span lang="en">Available</span><span lang="pt">Disponível</span></span>
+    <p lang="en">Full-size ergonomic mouse for right-handers, with a hyper-fast scroll wheel you can switch to click-by-click. Comes with its USB Unifying receiver. Works perfectly.</p>
+    <p lang="pt">Rato ergonómico de tamanho normal para destros, com scroll ultrarrápido que pode passar a clique a clique. Inclui o recetor USB Unifying. Funciona perfeitamente.</p>
+    <dl lang="en">
+      <dt>Battery</dt><dd>2 × AA, rated for up to 3 years</dd>
+      <dt>Works with</dt><dd>Mac, Windows, Chromebook</dd>
+      <dt>New price</dt><dd>€44.99 at Logitech</dd>
+    </dl>
+    <dl lang="pt">
+      <dt>Pilhas</dt><dd>2 × AA, até 3 anos de autonomia</dd>
+      <dt>Compatível com</dt><dd>Mac, Windows, Chromebook</dd>
+      <dt>Preço novo</dt><dd>44,99 € na Logitech</dd>
+    </dl>
   </article>
 
   <footer>
-    <p><strong>Why I'm selling:</strong> I've collected a few too many luggage pieces in my wandering and want to save space at home.</p>
-    Last updated 18 November 2026. If an item is listed here, it's still available.
+    <p lang="en"><strong>Why I'm selling:</strong> I've collected a few too many luggage pieces in my wandering and want to save space at home.</p>
+    <p lang="pt"><strong>Porque vendo:</strong> nas minhas andanças fui juntando malas a mais e quero ganhar espaço em casa.</p>
+    <p lang="en">Last updated 18 November 2026. If an item is listed here, it's still available.</p>
+    <p lang="pt">Atualizado a 18 de novembro de 2026. Se um artigo aparece aqui, ainda está disponível.</p>
   </footer>
 </div>
+<script>
+(function(){
+  var html=document.documentElement, btns=document.querySelectorAll('.lang button');
+  function set(l){
+    html.lang=l;
+    btns.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.set===l?'true':'false')});
+    try{localStorage.setItem('lang',l)}catch(e){}
+  }
+  var saved=null; try{saved=localStorage.getItem('lang')}catch(e){}
+  var q=new URLSearchParams(location.search).get('lang');
+  set(q==='pt'||q==='en' ? q : saved || ((navigator.language||'').toLowerCase().indexOf('pt')===0 ? 'pt' : 'en'));
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set)})});
+})();
+</script>
 </body>
 </html>
